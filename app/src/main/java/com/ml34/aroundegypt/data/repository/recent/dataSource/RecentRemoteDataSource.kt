@@ -1,4 +1,4 @@
-package com.ml34.aroundegypt.data.dataSource.recent
+package com.ml34.aroundegypt.data.repository.recent.dataSource
 
 import com.ml34.aroundegypt.data.model.ListExperienceModel
 import retrofit2.Response
