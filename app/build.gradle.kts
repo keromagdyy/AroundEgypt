@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
+    alias(libs.plugins.hilt) // ✅ Apply Hilt plugin
 
 }
 
@@ -51,6 +52,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -84,9 +86,9 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     androidTestImplementation(libs.hilt.android.testing)
-    kapt(libs.hilt.compiler)
     testImplementation(libs.hilt.android.testing)
-    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
 
     // room
     implementation(libs.androidx.room.common)
