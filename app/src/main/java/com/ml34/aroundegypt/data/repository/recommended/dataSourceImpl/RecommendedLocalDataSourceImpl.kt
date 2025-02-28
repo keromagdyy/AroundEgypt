@@ -8,21 +8,21 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class RecommendedLocalDataSourceImpl @Inject constructor(private val recentDao: RecommendedDao) :
+class RecommendedLocalDataSourceImpl @Inject constructor(private val recommendedDao: RecommendedDao) :
     RecommendedLocalDataSource {
     override suspend fun getAllRecommendedFromDB(): List<ExperienceModel> {
-        return recentDao.getAllRecommended()
+        return recommendedDao.getAllRecommended()
     }
 
     override suspend fun saveAllRecommendedToDB(recommended: List<ExperienceModel>) {
         CoroutineScope(Dispatchers.IO).launch {
-            recentDao.saveAllRecommended(recommended)
+            recommendedDao.saveAllRecommended(recommended)
         }
     }
 
     override suspend fun clearAll() {
         CoroutineScope(Dispatchers.IO).launch {
-            recentDao.deleteAllRecommended()
+            recommendedDao.deleteAllRecommended()
         }
     }
 }

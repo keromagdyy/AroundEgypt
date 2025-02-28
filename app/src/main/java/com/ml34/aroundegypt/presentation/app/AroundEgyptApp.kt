@@ -1,4 +1,4 @@
-package com.ml34.aroundegypt.ui
+package com.ml34.aroundegypt.presentation.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

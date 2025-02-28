@@ -10,7 +10,7 @@ import com.ml34.aroundegypt.data.model.ExperienceModel
 
 @Database(
     entities = [ExperienceModel::class],
-    version = 1,
+    version = 5,
     exportSchema = false
 )
 @TypeConverters(MapConverter::class, MapConverter::class)

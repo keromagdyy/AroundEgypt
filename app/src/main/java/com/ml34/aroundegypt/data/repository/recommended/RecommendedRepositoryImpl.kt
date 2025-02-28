@@ -3,11 +3,8 @@ package com.ml34.aroundegypt.data.repository.recommended
 import android.util.Log
 import com.ml34.aroundegypt.data.model.ExperienceModel
 import com.ml34.aroundegypt.data.model.ListExperienceModel
-import com.ml34.aroundegypt.data.repository.recent.dataSource.RecentLocalDataSource
-import com.ml34.aroundegypt.data.repository.recent.dataSource.RecentRemoteDataSource
 import com.ml34.aroundegypt.data.repository.recommended.dataSource.RecommendedLocalDataSource
 import com.ml34.aroundegypt.data.repository.recommended.dataSource.RecommendedRemoteDataSource
-import com.ml34.aroundegypt.domain.repository.RecentRepository
 import com.ml34.aroundegypt.domain.repository.RecommendedRepository
 import java.lang.Exception
 import javax.inject.Inject
@@ -38,10 +35,10 @@ class RecommendedRepositoryImpl @Inject constructor(
         recommendedLocalDataSource.getAllRecommendedFromDB()
 
     override suspend fun saveAllRecommended(): List<ExperienceModel> {
-        val recentData = getRecommended().data
+        val recommendedData = getRecommended().data
         recommendedLocalDataSource.clearAll()
-        recommendedLocalDataSource.saveAllRecommendedToDB(recentData)
-        return recentData
+        recommendedLocalDataSource.saveAllRecommendedToDB(recommendedData)
+        return recommendedData
     }
 
     private suspend fun getRecommendedFromDB(): ListExperienceModel =

@@ -104,5 +104,6 @@ dependencies {
     // Coil image loader
     implementation(libs.coil.compose)
 
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.31.1-alpha")
 
 }

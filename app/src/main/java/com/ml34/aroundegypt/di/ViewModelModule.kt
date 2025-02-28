@@ -7,8 +7,8 @@ import com.ml34.aroundegypt.domain.useCase.recent.SaveRecentUseCase
 import com.ml34.aroundegypt.domain.useCase.recommended.GetRecommendedFromDbUseCase
 import com.ml34.aroundegypt.domain.useCase.recommended.GetRecommendedUseCase
 import com.ml34.aroundegypt.domain.useCase.recommended.SaveRecommendedUseCase
-import com.ml34.aroundegypt.ui.RecentViewModel
-import com.ml34.aroundegypt.ui.RecommendedViewModel
+import com.ml34.aroundegypt.presentation.ui.home.mostRecentExperiences.RecentViewModel
+import com.ml34.aroundegypt.presentation.ui.home.recommendedExperiences.RecommendedViewModel
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

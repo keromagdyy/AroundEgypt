@@ -31,19 +31,18 @@ class UseCaseModule {
     }
 
 
-
-//    @Provides
-//    fun provideGetRecommendedUseCase(recommendedRepository: RecommendedRepository): GetRecommendedUseCase {
-//        return GetRecommendedUseCase(recommendedRepository)
-//    }
-//    @Provides
-//    fun provideGetRecentFromDbUseCase(recommendedRepository: RecommendedRepository): GetRecommendedFromDbUseCase {
-//        return GetRecommendedFromDbUseCase(recommendedRepository)
-//    }
-//    @Provides
-//    fun provideSaveRecentToDbUseCase(recommendedRepository: RecommendedRepository): SaveRecommendedUseCase {
-//        return SaveRecommendedUseCase(recommendedRepository)
-//    }
+    @Provides
+    fun provideGetRecommendedUseCase(recommendedRepository: RecommendedRepository): GetRecommendedUseCase {
+        return GetRecommendedUseCase(recommendedRepository)
+    }
+    @Provides
+    fun provideGetRecommendedFromDbUseCase(recommendedRepository: RecommendedRepository): GetRecommendedFromDbUseCase {
+        return GetRecommendedFromDbUseCase(recommendedRepository)
+    }
+    @Provides
+    fun provideSaveRecommendedToDbUseCase(recommendedRepository: RecommendedRepository): SaveRecommendedUseCase {
+        return SaveRecommendedUseCase(recommendedRepository)
+    }
 
 
 }

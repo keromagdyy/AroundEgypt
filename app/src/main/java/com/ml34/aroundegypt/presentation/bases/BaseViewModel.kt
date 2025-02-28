@@ -1,4 +1,4 @@
-package com.ml34.aroundegypt.ui
+package com.ml34.aroundegypt.presentation.bases
 
 import android.content.Context
 import android.net.ConnectivityManager

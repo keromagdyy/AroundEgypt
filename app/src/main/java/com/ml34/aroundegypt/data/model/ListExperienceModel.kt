@@ -1,6 +1,6 @@
 package com.ml34.aroundegypt.data.model
 
 data class ListExperienceModel(
-    val meta: List<MetaModel> = listOf(),
+    val meta: MetaModel = MetaModel(),
     val data: List<ExperienceModel> = listOf(),
 )

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Around Egypt</string>
+    <string name="no_content_available">No content available</string>
+    <string name="now_you_can_explore_etc">Now you can explore any experience in 360 degrees and get all the details about it all in one place.</string>
 </resources>
